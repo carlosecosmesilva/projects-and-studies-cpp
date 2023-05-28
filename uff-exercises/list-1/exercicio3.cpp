@@ -1,6 +1,6 @@
 /*No código foi declarado a classe Fila2F
 e juntamente com ela foi inserido duas pilhas (p1 e p2) como membros privados da classe.
-A p1 é utilizada para armazenar os elementos da pilha,
+No caso da p1 é utilizada para armazenar os elementos da pilha,
 já a p2 é utilizada temporariamente em algumas operações.*/
 
 #include <iostream>

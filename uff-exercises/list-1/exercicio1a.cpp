@@ -1,8 +1,15 @@
+/* No algoritmo abaixo foi criada a classe Deque que efetua a implementaçãlo de uma lista duplamente encadeada, 
+que será tratada para receber as operações contidas em cada função.
+Foi desenvolvido função de operações básicas, como inicio onde é pego o inicio do Deque, fim, que retorna o fim do Deque,
+já nas operações de inserção repetimos o padrão com inserção no inicio do deque e inserção no final do Deque*/
+
 #include <iostream>
 
-class Deque {
+class Deque
+{
 private:
-  struct Node {
+  struct Node
+  {
     char data;
     Node *prev;
     Node *next;
@@ -14,50 +21,67 @@ private:
 public:
   Deque() : head(nullptr), tail(nullptr) {}
 
-  char inicio() const {
-    if (head != nullptr) {
+  char inicio() const
+  {
+    if (head != nullptr)
+    {
       return head->data;
     }
     throw std::runtime_error(
         "Deque vazio: não é possível obter o elemento do início.");
   }
 
-  char fim() const {
-    if (tail != nullptr) {
+  char fim() const
+  {
+    if (tail != nullptr)
+    {
       return tail->data;
     }
     throw std::runtime_error(
         "Deque vazio: não é possível obter o elemento do fim.");
   }
 
-  void insereInicio(char elemento) {
+  void insereInicio(char elemento)
+  {
     Node *newNode = new Node{elemento, nullptr, head};
-    if (head != nullptr) {
+    if (head != nullptr)
+    {
       head->prev = newNode;
-    } else {
+    }
+    else
+    {
       tail = newNode;
     }
     head = newNode;
   }
 
-  void insereFim(char elemento) {
+  void insereFim(char elemento)
+  {
     Node *newNode = new Node{elemento, tail, nullptr};
-    if (tail != nullptr) {
+    if (tail != nullptr)
+    {
       tail->next = newNode;
-    } else {
+    }
+    else
+    {
       head = newNode;
     }
     tail = newNode;
   }
 
-  char removeInicio() {
-    if (head != nullptr) {
+  char removeInicio()
+  {
+    if (head != nullptr)
+    {
       char elemento = head->data;
       Node *temp = head;
       head = head->next;
-      if (head != nullptr) {
+      if (head != nullptr)
+      {
         head->prev = nullptr;
-      } else {
+      }
+      else
+      {
         tail = nullptr;
       }
       delete temp;
@@ -67,14 +91,19 @@ public:
         "Deque vazio: não é possível remover o elemento do início.");
   }
 
-  char removeFim() {
-    if (tail != nullptr) {
+  char removeFim()
+  {
+    if (tail != nullptr)
+    {
       char elemento = tail->data;
       Node *temp = tail;
       tail = tail->prev;
-      if (tail != nullptr) {
+      if (tail != nullptr)
+      {
         tail->next = nullptr;
-      } else {
+      }
+      else
+      {
         head = nullptr;
       }
       delete temp;
@@ -88,7 +117,8 @@ public:
 static_assert(std::is_same_v<Deque, Deque>,
               "O tipo fornecido não corresponde à classe Deque.");
 
-int main() {
+int main()
+{
   Deque deque;
   deque.insereInicio('A');
   deque.insereFim('B');
@@ -98,3 +128,8 @@ int main() {
   deque.removeFim();
   return 0;
 }
+
+/* No caso do algoritmo ser executado em uma ordem cronológica correta o mesmo não teria problemas
+e sua complexidade seria de O(1) sempre, devido o mesmo utilizar de uma lista duplamente encadeada,
+que irá facilitar o "trânsito" de informações, 
+e principalmente porque o tempo de execução não vai depender da quantidade de elementos. */

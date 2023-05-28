@@ -50,3 +50,15 @@ void polonesa(char *expressao, int N, char *saida_polonesa) {
 
   saida_polonesa[j] = '\0'; // Adiciona o caractere de terminação de string
 }
+
+int main() {
+    char expressao[] = "((A+B)*(C-(F/D)))";
+    int tamanho = std::strlen(expressao);
+    char saidaPolonesa[tamanho + 1];
+
+    polonesa(expressao, tamanho, saidaPolonesa);
+
+    std::cout << "Saída: " << saidaPolonesa << std::endl;
+
+    return 0;
+}

@@ -73,20 +73,20 @@ No* inserir(No* no, int dado) {
 
     no->altura = 1 + max(altura(no->esquerda), altura(no->direita));
 
-    int balance = pegarBalanceamento(no);
+    int fatorBalanceamento = pegarBalanceamento(no);
 
-    if (balance > 1 && dado < no->esquerda->dado)
+    if (fatorBalanceamento > 1 && dado < no->esquerda->dado)
         return rotacaoDireita(no);
 
-    if (balance < -1 && dado > no->direita->dado)
+    if (fatorBalanceamento < -1 && dado > no->direita->dado)
         return rotacaoEsquerda(no);
 
-    if (balance > 1 && dado > no->esquerda->dado) {
+    if (fatorBalanceamento > 1 && dado > no->esquerda->dado) {
         no->esquerda = rotacaoEsquerda(no->esquerda);
         return rotacaoDireita(no);
     }
 
-    if (balance < -1 && dado < no->direita->dado) {
+    if (fatorBalanceamento < -1 && dado < no->direita->dado) {
         no->direita = rotacaoDireita(no->direita);
         return rotacaoEsquerda(no);
     }
@@ -96,9 +96,9 @@ No* inserir(No* no, int dado) {
 
 No* encontrarMenorNo(No* no) {
     No* atual = no;
-
-    while (atual->esquerda != NULL)
+    while (atual->esquerda != NULL){
         atual = atual->esquerda;
+    }
 
     return atual;
 }
@@ -131,16 +131,16 @@ No* removerNo(No* raiz, int dado) {
     if (raiz == NULL)
         return raiz;
     raiz->altura = 1 + max(altura(raiz->esquerda), altura(raiz->direita));
-    int balance = pegarBalanceamento(raiz);
-    if (balance > 1 && pegarBalanceamento(raiz->esquerda) >= 0)
+    int fatorBalanceamento = pegarBalanceamento(raiz);
+    if (fatorBalanceamento > 1 && pegarBalanceamento(raiz->esquerda) >= 0)
         return rotacaoDireita(raiz);
-    if (balance > 1 && pegarBalanceamento(raiz->esquerda) < 0) {
+    if (fatorBalanceamento > 1 && pegarBalanceamento(raiz->esquerda) < 0) {
         raiz->esquerda = rotacaoEsquerda(raiz->esquerda);
         return rotacaoDireita(raiz);
     }
-    if (balance < -1 && pegarBalanceamento(raiz->direita) <= 0)
+    if (fatorBalanceamento < -1 && pegarBalanceamento(raiz->direita) <= 0)
         return rotacaoEsquerda(raiz);
-    if (balance < -1 && pegarBalanceamento(raiz->direita) > 0) {
+    if (fatorBalanceamento < -1 && pegarBalanceamento(raiz->direita) > 0) {
         raiz->direita = rotacaoDireita(raiz->direita);
         return rotacaoEsquerda(raiz);
     }
@@ -170,13 +170,11 @@ int main() {
     clock_t inicio, fim;
     double tempoDecorrido;
 
-    int elemento = 30 ; // trocar o elemento para um numero dentro do loop para ver a diferença no tempo de execução do algoritmo.
+    int elemento = 30 ; // trocar o elemento para um número dentro do loop para ver a diferença no tempo de execução do algoritmo.
     int elementoEncontrado = 4;
 
-    //Descomentar trecho de código abaixo ao trocar o elemento para ver a diferença de tempo de execução na remoção
-
     int i;
-    for (i = 100; i >= 1; i--) {
+    for (i = 100; i >= 1; i--) { //Aumentar i para ver a questão do tempo de execução
         raiz = inserir(raiz, i);
     }
 

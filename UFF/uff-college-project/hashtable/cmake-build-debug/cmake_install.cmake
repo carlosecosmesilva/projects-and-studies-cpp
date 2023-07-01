@@ -1,4 +1,4 @@
-# Install script for directory: /home/cadu/Documentos/Projetos/hashtable
+# Install script for directory: /home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/hashtable
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cadu/Documentos/Projetos/hashtable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/hashtable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

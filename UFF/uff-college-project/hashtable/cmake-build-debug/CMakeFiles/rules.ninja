@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/cadu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/cadu/Documentos/Projetos/hashtable -B/home/cadu/Documentos/Projetos/hashtable/cmake-build-debug
+  command = /home/cadu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9011.31/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/hashtable -B/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/hashtable/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

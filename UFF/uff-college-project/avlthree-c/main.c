@@ -170,24 +170,15 @@ int main() {
     clock_t inicio, fim;
     double tempoDecorrido;
 
-    int elemento = 30 ; // trocar o elemento para 5 para ver a diferença no tempo de execução do algoritmo.
-    int elementoEncontrado = 40; // trocar para 4 para ver a diferença no tempo de execução do algoritmo.
+    int elemento = 30 ; // trocar o elemento para um numero dentro do loop para ver a diferença no tempo de execução do algoritmo.
+    int elementoEncontrado = 4;
 
-    raiz = inserir(raiz, 10);
-    raiz = inserir(raiz, 20);
-    raiz = inserir(raiz, 30);
-    raiz = inserir(raiz, 40);
-    raiz = inserir(raiz, 50);
-    raiz = inserir(raiz, 25);
+    //Descomentar trecho de código abaixo ao trocar o elemento para ver a diferença de tempo de execução na remoção
 
-    //Descomentar trecho de código abaixo ao trocar o elemento para 5 para ver a diferença de tempo de execução
-
-    /*
-    raiz = inserir(raiz, 1);
-    raiz = inserir(raiz, 2);
-    raiz = inserir(raiz, 3);
-    raiz = inserir(raiz, 4);
-    raiz = inserir(raiz, 5);*/
+    int i;
+    for (i = 100; i >= 1; i--) {
+        raiz = inserir(raiz, i);
+    }
 
     printf("Percurso em ordem da árvore AVL: ");
     emOrdem(raiz);

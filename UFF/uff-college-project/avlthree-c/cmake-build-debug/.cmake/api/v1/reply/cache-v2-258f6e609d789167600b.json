@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/cadu/Documentos/Projetos/avlthree-c/cmake-build-debug"
+			"value" : "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/avlthree-c/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/cadu/Documentos/Projetos/avlthree-c/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/avlthree-c/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/cadu/Documentos/Projetos/avlthree-c"
+			"value" : "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/avlthree-c"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1019,7 +1019,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/cadu/Documentos/Projetos/avlthree-c/cmake-build-debug"
+			"value" : "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/avlthree-c/cmake-build-debug"
 		},
 		{
 			"name" : "avlthree_c_IS_TOP_LEVEL",
@@ -1043,7 +1043,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/cadu/Documentos/Projetos/avlthree-c"
+			"value" : "/home/cadu/Documentos/GitHub/projects-and-studies-cpp/UFF/uff-college-project/avlthree-c"
 		}
 	],
 	"kind" : "cache",

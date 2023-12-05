@@ -10,11 +10,11 @@
 
 -   All content in the links below was solved based on the questionnaire found in the description folder, content provided to make students learning easier.
 
-##### Lista 1
+##### List 1
 
 -   [Access here](https://github.com/carlosecosmesilva/projects-and-studies-cpp/tree/main/UFF/uff-exercises/list-1)
 
-##### Lista 2
+##### List 2
 
 -   [Access here](https://github.com/carlosecosmesilva/projects-and-studies-cpp/tree/main/UFF/uff-exercises/list-2)
 
